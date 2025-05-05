@@ -2,156 +2,224 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Camino como Trader</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Especialistas Financieros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
+      margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to right, #1e3c72, #2a5298);
-      color: #ffffff;
-      line-height: 1.6;
-      padding: 0 20px;
+      background-color: #f5f7fa;
+      color: #333;
     }
 
     header {
-      text-align: center;
-      padding: 3rem 0 2rem;
+      background-color: #0a1f44;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #cbd5e0;
-    }
-
-    nav a {
-      margin: 0 10px;
+    header nav a {
+      color: white;
+      margin-left: 20px;
       text-decoration: none;
-      color: #93c5fd;
       font-weight: bold;
     }
 
-    nav a:hover {
-      color: #ffffff;
+    .hero {
+      background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437f0?fit=crop&w=1500&q=80') no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
     }
 
-    .container {
-      max-width: 800px;
+    .hero h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
       margin: auto;
-      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #0a1f44;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
       border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s ease;
     }
 
-    h2 {
-      margin-top: 2rem;
-      font-size: 1.8rem;
-      border-bottom: 2px solid #3b82f6;
-      padding-bottom: 0.5rem;
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    p, li {
-      font-size: 1.1rem;
-      margin-top: 1rem;
+    .card h3 {
+      color: #0a1f44;
+    }
+
+    .card p {
+      font-size: 0.95rem;
     }
 
     .btn {
       display: inline-block;
-      background: #3b82f6;
+      margin-top: 15px;
+      background-color: #0a1f44;
       color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
+      padding: 10px 20px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 1rem;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #2563eb;
-    }
-
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      margin-top: 1rem;
-      border-radius: 12px;
-    }
-
-    .video-container iframe {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      border: 0;
     }
 
     footer {
+      background-color: #0a1f44;
+      color: white;
+      padding: 40px 20px;
       text-align: center;
-      margin: 3rem 0 1rem;
-      font-size: 0.9rem;
-      color: #cbd5e0;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      z-index: 1000;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Mi Camino como Trader</h1>
-    <p>Documentando mi progreso desde $10 hasta la libertad financiera</p>
+    <div><strong>Especialistas Financieros</strong></div>
     <nav>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#progreso">Progreso</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#hipotecario">Hipotecario</a>
+      <a href="#vehiculo">Vehículos</a>
+      <a href="#libre">Libre Destino</a>
+      <a href="#comercial">Comercial</a>
+      <a href="#consultoria">Consultoría</a>
     </nav>
   </header>
 
-  <div class="container">
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Hola, soy Gabriel y decidí comenzar en el mundo del trading con solo $10, un computador y mucha disciplina. Esta página es mi diario público: para aprender, compartir y crecer con otros que también quieren mejorar sus finanzas.</p>
-    </section>
+  <section class="hero">
+    <h1>Soluciones Financieras para Impulsar tu Futuro</h1>
+  </section>
 
-    <section id="progreso">
-      <h2>Progreso</h2>
-      <p>Voy documentando todo: desde operaciones demo hasta resultados reales. Aquí un ejemplo de mi contenido:</p>
-
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Mi progreso" allowfullscreen></iframe>
+  <section class="section" id="hipotecario">
+    <h2>Crédito Hipotecario</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Compra de Vivienda</h3>
+        <p>Financia tu casa soñada con tasas competitivas y asesoría personalizada.</p>
+        <a class="btn" href="https://wa.me/57XXXXXXXXXX" target="_blank">Solicitar</a>
       </div>
+      <div class="card">
+        <h3>Leasing Habitacional</h3>
+        <p>Alternativa flexible para adquirir vivienda sin desembolso inicial.</p>
+        <a class="btn" href="https://wa.me/57XXXXXXXXXX" target="_blank">Solicitar</a>
+      </div>
+    </div>
+  </section>
 
-      <a href="#" class="btn">Únete a mi canal de Telegram</a>
-    </section>
+  <section class="section" id="vehiculo">
+    <h2>Crédito Vehículo</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Vehículo Nuevo</h3>
+        <p>Accede a un carro nuevo con financiación rápida y sin complicaciones.</p>
+        <a class="btn" href="https://wa.me/57XXXXXXXXXX" target="_blank">Solicitar</a>
+      </div>
+      <div class="card">
+        <h3>Vehículo Usado</h3>
+        <p>Oportunidades con excelente tasa para autos usados.</p>
+        <a class="btn" href="https://wa.me/57XXXXXXXXXX" target="_blank">Solicitar</a>
+      </div>
+    </div>
+  </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>¿Quieres colaborar, aprender conmigo o darme feedback? Escríbeme:</p>
-      <ul>
-        <li>Email: gabrieltrading@email.com</li>
-        <li>Telegram: @glopera24</li>
-        <li>Instagram: @gabriel.trader</li>
-      </ul>
-    </section>
-  </div>
+  <section class="section" id="libre">
+    <h2>Crédito Libre Destino</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Crédito Personal</h3>
+        <p>Usa el dinero en lo que desees: viajes, estudios, negocios o imprevistos.</p>
+        <a class="btn" href="https://wa.me/57XXXXXXXXXX" target="_blank">Solicitar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="comercial">
+    <h2>Crédito Comercial</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Capital de Trabajo</h3>
+        <p>Impulsa el crecimiento de tu empresa con líneas de crédito especializadas.</p>
+        <a class="btn" href="https://wa.me/573183269385" target="_blank">Solicitar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="consultoria">
+    <h2>Consultoría Financiera</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Asesoría Integral</h3>
+        <p>Te acompañamos en decisiones financieras con estrategias personalizadas.</p>
+        <a class="btn" href="https://wa.me/57XXXXXXXXXX" target="_blank">Agendar</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 Gabriel Trader. Todos los derechos reservados.
+    <p>© 2025 Especialistas Financieros | Todos los derechos reservados</p>
+    <p>Email: advisorfinancialsas@gmail.com</p>
   </footer>
+
+  <a href="https://wa.me/57XXXXXXXXXX" class="whatsapp-float" target="_blank" title="Chatea con nosotros en WhatsApp">
+    📱
+  </a>
 
 </body>
 </html>
