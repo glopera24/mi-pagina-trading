@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Camino como Trader</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -13,75 +13,74 @@
     }
 
     body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #ffffff;
       line-height: 1.6;
+      padding: 0 20px;
     }
 
     header {
-      background-color: #1f2937;
-      color: white;
-      padding: 1.5rem 0;
       text-align: center;
+      padding: 3rem 0 2rem;
     }
 
     header h1 {
+      font-size: 2.8rem;
       margin-bottom: 0.5rem;
     }
 
-    nav {
-      margin-top: 1rem;
+    header p {
+      font-size: 1.2rem;
+      color: #cbd5e0;
     }
 
     nav a {
-      color: #9ca3af;
-      margin: 0 15px;
+      margin: 0 10px;
       text-decoration: none;
+      color: #93c5fd;
       font-weight: bold;
     }
 
     nav a:hover {
-      color: white;
+      color: #ffffff;
     }
 
     .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    section {
-      margin-bottom: 2rem;
+      max-width: 800px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
 
     h2 {
-      color: #1f2937;
-      margin-bottom: 1rem;
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 0.5rem;
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #1f2937;
-      color: white;
+    p, li {
+      font-size: 1.1rem;
+      margin-top: 1rem;
     }
 
     .btn {
       display: inline-block;
-      background-color: #2563eb;
+      background: #3b82f6;
       color: white;
-      padding: 10px 20px;
-      margin-top: 10px;
+      padding: 12px 24px;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #1d4ed8;
+      background: #2563eb;
     }
 
     .video-container {
@@ -90,14 +89,23 @@
       height: 0;
       overflow: hidden;
       margin-top: 1rem;
+      border-radius: 12px;
     }
 
     .video-container iframe {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
+      left: 0;
+      top: 0;
+      border: 0;
+    }
+
+    footer {
+      text-align: center;
+      margin: 3rem 0 1rem;
+      font-size: 0.9rem;
+      color: #cbd5e0;
     }
   </style>
 </head>
@@ -105,7 +113,7 @@
 
   <header>
     <h1>Mi Camino como Trader</h1>
-    <p>De $10 a libertad financiera</p>
+    <p>Documentando mi progreso desde $10 hasta la libertad financiera</p>
     <nav>
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#progreso">Progreso</a>
@@ -116,15 +124,15 @@
   <div class="container">
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
-      <p>Me llamo Juan, y comencé mi camino en el trading con solo $10, una PC y muchas ganas. Esta página es para documentar mi progreso, enseñar lo que aprendo, y conectarme con otros interesados en esta industria.</p>
+      <p>Hola, soy Gabriel y decidí comenzar en el mundo del trading con solo $10, un computador y mucha disciplina. Esta página es mi diario público: para aprender, compartir y crecer con otros que también quieren mejorar sus finanzas.</p>
     </section>
 
     <section id="progreso">
       <h2>Progreso</h2>
-      <p>Estoy practicando con cuentas demo y documentando cada operación. Aquí comparto mis aprendizajes y resultados.</p>
+      <p>Voy documentando todo: desde operaciones demo hasta resultados reales. Aquí un ejemplo de mi contenido:</p>
 
       <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de ejemplo" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Mi progreso" allowfullscreen></iframe>
       </div>
 
       <a href="#" class="btn">Únete a mi canal de Telegram</a>
@@ -132,17 +140,17 @@
 
     <section id="contacto">
       <h2>Contacto</h2>
-      <p>¿Quieres colaborar, invertir o aprender conmigo? Escríbeme:</p>
+      <p>¿Quieres colaborar, aprender conmigo o darme feedback? Escríbeme:</p>
       <ul>
-        <li>Email: juantrader@email.com</li>
-        <li>Instagram: @juantrader</li>
-        <li>Telegram: @juan_trading</li>
+        <li>Email: gabrieltrading@email.com</li>
+        <li>Telegram: @glopera24</li>
+        <li>Instagram: @gabriel.trader</li>
       </ul>
     </section>
   </div>
 
   <footer>
-    <p>&copy; 2025 Juan Trader. Todos los derechos reservados.</p>
+    &copy; 2025 Gabriel Trader. Todos los derechos reservados.
   </footer>
 
 </body>
