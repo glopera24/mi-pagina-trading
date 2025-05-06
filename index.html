@@ -4,83 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Especialistas Financieros</title>
+  <meta name="description" content="Asesoría financiera profesional para créditos e inversiones.">
+  <meta name="keywords" content="créditos, asesoría financiera, hipotecario, vehicular, libre destino, comerciales, exterior">
+  <meta name="author" content="Gustavo Lopera">
+  <meta property="og:title" content="Especialistas Financieros - Gustavo Lopera">
+  <meta property="og:description" content="Asesoría financiera profesional para créditos e inversiones.">
+  <meta property="og:image" content="https://source.unsplash.com/1200x630/?finance,success">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <style>
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background-color: #111;
-      color: #fff;
+      background-color: #f4f4f4;
+      color: #333;
     }
     header, footer {
-      background-color: #0f0f0f;
+      background-color: #002d72;
+      color: white;
       padding: 20px;
       text-align: center;
     }
     nav a {
+      color: white;
       margin: 0 15px;
-      color: #0ff;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?finance,success') no-repeat center center/cover;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
     }
     section {
-      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
     }
-    h2 {
-      color: #0ff;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .producto {
-      background: #1a1a1a;
-      padding: 20px;
-      margin: 15px auto;
-      max-width: 800px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,255,255,0.2);
-      transition: transform 0.3s ease;
-    }
-    .producto:hover {
-      transform: scale(1.02);
-    }
-    .producto h3 {
-      color: #0ff;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #0ff;
-      color: #000;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    .btn:hover {
-      background-color: #00cccc;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-    .carousel {
-      display: flex;
-      overflow-x: auto;
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 20px;
-      scroll-behavior: smooth;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
     }
-    .carousel img {
-      height: 60px;
-      background-color: #fff;
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #002d72;
+    }
+    .calculator input, .calculator button {
+      width: 100%;
       padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
       border-radius: 8px;
+    }
+    .calculator button {
+      background-color: #002d72;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .calculator button:hover {
+      background-color: #004aad;
+    }
+    .testimonial {
+      text-align: center;
+      margin: 20px;
+    }
+    .testimonial img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    footer a {
+      color: #00ffff;
     }
   </style>
 </head>
@@ -88,108 +109,83 @@
   <header>
     <h1>Especialistas Financieros</h1>
     <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#servicios">Servicios</a>
+      <a href="#productos">Productos</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#testimonios">Testimonios</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
-  <section id="inicio">
-    <h2>Bienvenido</h2>
-    <p style="text-align: center; max-width: 700px; margin: auto;">Somos tu aliado experto en soluciones financieras. Conéctate con las mejores opciones de crédito, respaldo profesional y atención personalizada.</p>
+  <section class="hero" data-aos="fade-up">
+    <h1>Soluciones Financieras a Tu Medida</h1>
+    <p>Asesoría personalizada para que alcances tus metas.</p>
   </section>
 
-  <section id="nosotros">
-    <h2>¿Quién es Gustavo Lopera?</h2>
-    <div style="max-width: 100px; margin: auto; text-align: center;">
-      <img src="https://media.licdn.com/dms/image/v2/D4E03AQGxJRupjeTIzQ/profile-displayphoto-shrink_800_800/B4EZamZUO3GYAc-/0/1746548376941?e=1752105600&v=beta&t=hQVgK8NTbUs-cThnFF_yPHNaKFssP-DGOZRlzTLd4Tw" alt="Gustavo Lopera" style="border-radius: 50%; margin-bottom: 20px;">
-      <p>Gustavo Lopera es un asesor experto en banca y finanzas con más de 15 años de experiencia. Ha ayudado a cientos de personas y empresas a tomar decisiones acertadas en su camino financiero, siempre con compromiso, ética y profesionalismo.</p>
-    </div>
-  </section>
-
-  <section id="servicios">
-    <h2>Servicios Financieros</h2>
-    <div class="producto">
-      <h3>Crédito Hipotecario</h3>
-      <p>Accede a líneas de crédito hipotecario con las mejores tasas del mercado. Ideal para compra de vivienda nueva o usada.</p>
-      <a class="btn" href="https://wa.me/573001234567?text=Hola%2C+quiero+m%C3%A1s+informaci%C3%B3n+sobre+Cr%C3%A9dito+Hipotecario" target="_blank">Solicitar información</a>
-    </div>
-    <div class="producto">
-      <h3>Crédito Vehicular</h3>
-      <p>Compra tu vehículo nuevo o usado con financiamiento flexible y rápido.</p>
-      <a class="btn" href="https://wa.me/573001234567?text=Hola%2C+quiero+m%C3%A1s+informaci%C3%B3n+sobre+Cr%C3%A9dito+Vehicular" target="_blank">Solicitar información</a>
-    </div>
-    <div class="producto">
-      <h3>Crédito de Libre Destino</h3>
-      <p>Usa el dinero como quieras. Para viajes, educación, salud o lo que necesites.</p>
-      <a class="btn" href="https://wa.me/573001234567?text=Hola%2C+quiero+m%C3%A1s+informaci%C3%B3n+sobre+Cr%C3%A9dito+de+Libre+Destino" target="_blank">Solicitar información</a>
-    </div>
-    <div class="producto">
-      <h3>Créditos Comerciales</h3>
-      <p>Impulsa tu empresa con financiación para capital de trabajo, compra de maquinaria y más.</p>
-      <a class="btn" href="https://wa.me/573001234567?text=Hola%2C+quiero+m%C3%A1s+informaci%C3%B3n+sobre+Cr%C3%A9ditos+Comerciales" target="_blank">Solicitar información</a>
-    </div>
-    <div class="producto">
-      <h3>Consultoría Financiera</h3>
-      <p>Recibe asesoría profesional para optimizar tus finanzas personales o corporativas.</p>
-      <a class="btn" href="https://wa.me/573001234567?text=Hola%2C+quiero+m%C3%A1s+informaci%C3%B3n+sobre+Consultor%C3%ADa+Financiera" target="_blank">Solicitar información</a>
+  <section id="productos" data-aos="fade-up">
+    <h2>Productos Financieros</h2>
+    <div class="cards">
+      <div class="card"><i class="fas fa-home"></i><h3>Crédito Hipotecario</h3><p>Compra tu vivienda soñada con las mejores tasas.</p></div>
+      <div class="card"><i class="fas fa-car"></i><h3>Crédito Vehicular</h3><p>Financia tu próximo auto de forma rápida y segura.</p></div>
+      <div class="card"><i class="fas fa-plane"></i><h3>Residentes en el Exterior</h3><p>Accede a créditos desde fuera del país.</p></div>
+      <div class="card"><i class="fas fa-briefcase"></i><h3>Crédito Comercial</h3><p>Impulsa tu negocio con líneas de crédito flexibles.</p></div>
+      <div class="card"><i class="fas fa-money-bill-wave"></i><h3>Libre Destino</h3><p>Usa tu crédito como lo necesites.</p></div>
     </div>
   </section>
 
-  <section id="alianzas">
-    <h2>Bancos aliados</h2>
-    <div class="carousel">
-      <img src="https://www.bancolombia.com/wcm/connect/a67af2d6-c768-4f4f-a33b-fd58074f7ce9/logo-bancolombia-black.svg?MOD=AJPERES" alt="Bancolombia">
-      <img src="https://banco.itau.co/documents/106246/0/ITAUCorporate_LOGO_340X340.png/1fd3c96e-cdb4-ab85-dfc2-a23dcc30cced?version=1.0&t=1710893748213" alt="Itaú">
-      <img src="https://cdn.aglty.io/scotiabank-colombia/Global-Rebrand/logo-site-2.png" alt="Colpatria">
-      <img src="https://www.bancodeoccidente.com.co/banco-de-occidente/imagenes/header/logo-bocc-gptw.svg" alt="Banco de Occidente">
-      <img src="https://vehigrupo.com/images/logomain.png" alt="Vehigrupo">
-      <img src="https://www.bbva.com/wp-content/uploads/2019/04/Logo-BBVA-1024x576.jpg" alt="BBVA">
-      <img src="https://www.bancodebogota.com/wps/wcm/connect/banco-de-bogota/9f8ad5b7-dbe2-4a58-bd6e-42f174ed16e1/logo.png" alt="Banco de Bogotá">
-      <img src="https://www.bancavillas.com.co/wp-content/uploads/2023/03/Logo-Banco-Villas.png" alt="Banco Villas">
-      <img src="https://www.finesa.com.co/media/finesa_logo_categorizador_hrz_2c_pms.svg" alt="Finesa">
+  <section id="calculadora" data-aos="fade-up">
+    <h2>Calculadora de Crédito</h2>
+    <div class="calculator">
+      <input type="number" id="monto" placeholder="Monto del Crédito">
+      <input type="number" id="tiempo" placeholder="Tiempo (meses)">
+      <input type="number" id="interes" placeholder="Interés Anual (%)">
+      <button onclick="calcularCuota()">Calcular Cuota</button>
+      <h3>Cuota Mensual: $<span id="resultado">0</span></h3>
     </div>
   </section>
 
-  <section id="contacto">
+  <section id="testimonios" data-aos="fade-up">
+    <h2>Testimonios</h2>
+    <div class="cards">
+      <div class="testimonial">
+        <img src="https://source.unsplash.com/100x100/?person" alt="Cliente 1">
+        <p>"Gracias a su asesoría logré comprar mi primera casa."</p>
+      </div>
+      <div class="testimonial">
+        <img src="https://source.unsplash.com/100x100/?person,smile" alt="Cliente 2">
+        <p>"Excelente servicio y atención al detalle."</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" data-aos="fade-up">
     <h2>Contacto</h2>
-    <form action="https://formspree.io/f/mwpoonwv" method="POST" id="form-contacto" style="max-width: 600px; margin: 0 auto; background-color: #1a1a1a; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);">
-      <input type="text" name="nombre" placeholder="Tu Nombre" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: none; border-radius: 6px; background-color: #2c2c2c; color: #fff;"/>
-      <input type="email" name="email" placeholder="Tu Email" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: none; border-radius: 6px; background-color: #2c2c2c; color: #fff;"/>
-      <textarea name="mensaje" placeholder="Tu Mensaje" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: none; border-radius: 6px; background-color: #2c2c2c; color: #fff;" rows="6"></textarea>
-      <button type="submit" style="background-color: #0ff; color: #000; padding: 12px 20px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease;">Enviar</button>
-      <p id="mensaje-confirmacion" style="display: none; margin-top: 15px; color: #0f0; font-weight: bold;">¡Gracias! Tu mensaje ha sido enviado.</p>
+    <form action="https://formspree.io/f/mwpoonwv" method="POST">
+      <input type="text" name="nombre" placeholder="Tu Nombre" required>
+      <input type="email" name="email" placeholder="Tu Email" required>
+      <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea>
+      <div class="g-recaptcha" data-sitekey="6LeDhS8rAAAAACrgsLylxQqPG3ByuEua0sQjFhNY"></div>
+      <button type="submit">Enviar</button>
     </form>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </section>
-
-  <div class="whatsapp">
-    <a href="https://wa.me/573001234567" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="60">
-    </a>
-  </div>
 
   <footer>
-    <p>&copy; 2025 Gustavo Lopera - Especialistas Financieros</p>
+    <p>© 2025 Especialistas Financieros | Desarrollado por Gustavo Lopera</p>
+    <p><a href="mailto:advisorfinancialsas@gmail.com">advisorfinancialsas@gmail.com</a></p>
+    <p>Cra 49 A #94-18, Bogotá D.C., Colombia</p>
+    <p><a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
   </footer>
 
   <script>
-    document.getElementById('form-contacto').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const form = event.target;
-      fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          document.getElementById('mensaje-confirmacion').style.display = 'block';
-        }
-      });
-    });
+    AOS.init({ once: true });
+    function calcularCuota() {
+      const monto = parseFloat(document.getElementById('monto').value);
+      const tiempo = parseFloat(document.getElementById('tiempo').value);
+      const interesAnual = parseFloat(document.getElementById('interes').value);
+      const interesMensual = interesAnual / 12 / 100;
+      const cuota = (monto * interesMensual) / (1 - Math.pow(1 + interesMensual, -tiempo));
+      document.getElementById('resultado').textContent = isFinite(cuota) ? cuota.toFixed(2) : '0';
+    }
   </script>
 </body>
 </html>
