@@ -46,12 +46,6 @@
     .hero h1 {
       font-size: 3rem;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-      animation: fadeInUp 1s ease-out;
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     .section {
@@ -67,44 +61,38 @@
       color: #0a1f44;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
+    .accordion {
+      background-color: white;
+      border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      padding: 30px;
-      text-align: center;
-      transition: transform 0.3s ease;
+      overflow: hidden;
+      margin-bottom: 20px;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
+    .accordion-button {
       background-color: #0a1f44;
       color: white;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
+      cursor: pointer;
+      padding: 20px;
+      text-align: left;
+      border: none;
+      outline: none;
+      font-size: 1.2rem;
       font-weight: bold;
+      width: 100%;
     }
 
-    footer {
-      background-color: #0a1f44;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
+    .accordion-content {
+      padding: 20px;
+      display: none;
+      background-color: #f9f9f9;
     }
 
-    .whatsapp-float {
+    .accordion-content.active {
+      display: block;
+    }
+
+    .btn-whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
@@ -122,31 +110,11 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
-    form {
-      max-width: 600px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
-    form input, form textarea {
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    form button {
+    footer {
       background-color: #0a1f44;
       color: white;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
+      padding: 40px 20px;
+      text-align: center;
     }
   </style>
 </head>
@@ -163,49 +131,79 @@
   </header>
 
   <section class="hero">
-    <h1>Soluciones Financieras para Impulsar tu Futuro</h1>
+    <h1>Soluciones Financieras que Impulsan tu Futuro</h1>
   </section>
 
-  <section class="section" id="hipotecario" data-aos="fade-up">
+  <section class="section" id="hipotecario">
     <h2>Crédito Hipotecario</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Compra de Vivienda</h3>
-        <p>Financia tu casa soñada con tasas competitivas y asesoría personalizada.</p>
-        <a class="btn" href="https://wa.me/573183269385" target="_blank">Solicitar</a>
+    <div class="accordion">
+      <button class="accordion-button">Compra de Vivienda</button>
+      <div class="accordion-content">
+        <p>Financia tu casa soñada con tasas competitivas y acompañamiento profesional de principio a fin.</p>
       </div>
-      <div class="card">
-        <h3>Leasing Habitacional</h3>
-        <p>Alternativa flexible para adquirir vivienda sin desembolso inicial.</p>
-        <a class="btn" href="https://wa.me/573183269385" target="_blank">Solicitar</a>
+    </div>
+    <div class="accordion">
+      <button class="accordion-button">Leasing Habitacional</button>
+      <div class="accordion-content">
+        <p>Adquiere vivienda sin cuota inicial con opciones de leasing flexibles y ajustadas a tus necesidades.</p>
       </div>
     </div>
   </section>
 
-  <!-- Más secciones omitidas por brevedad, se mantendrán con mismo estilo -->
+  <section class="section" id="vehiculo">
+    <h2>Crédito de Vehículo</h2>
+    <div class="accordion">
+      <button class="accordion-button">Compra de Vehículos Nuevos o Usados</button>
+      <div class="accordion-content">
+        <p>Financia tu vehículo con plazos cómodos y tasas accesibles. Te ayudamos a encontrar la mejor opción.</p>
+      </div>
+    </div>
+  </section>
 
-  <section class="section" data-aos="fade-up">
-    <h2>Contáctanos</h2>
-    <form action="https://formspree.io/f/tu-codigo" method="POST">
-      <input type="text" name="nombre" placeholder="Tu nombre" required />
-      <input type="email" name="email" placeholder="Tu correo" required />
-      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
-      <button type="submit">Enviar Mensaje</button>
-    </form>
+  <section class="section" id="libre">
+    <h2>Crédito de Libre Destino</h2>
+    <div class="accordion">
+      <button class="accordion-button">Créditos para tus necesidades personales</button>
+      <div class="accordion-content">
+        <p>Usa el dinero como desees: educación, viajes, remodelación. Sin justificar el uso del crédito.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="comercial">
+    <h2>Créditos Comerciales</h2>
+    <div class="accordion">
+      <button class="accordion-button">Líneas para Pymes y Empresas</button>
+      <div class="accordion-content">
+        <p>Capital de trabajo, compra de activos, expansión. Diseñamos soluciones de crédito para tu negocio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="consultoria">
+    <h2>Consultoría Financiera</h2>
+    <div class="accordion">
+      <button class="accordion-button">Asesoría Personalizada</button>
+      <div class="accordion-content">
+        <p>Optimiza tus finanzas, planifica inversiones o sanea deudas. Un experto te acompaña paso a paso.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
     <p>© 2025 Especialistas Financieros | Todos los derechos reservados</p>
-    <p>Email: comercial@especialistasfinancieros.com</p>
+    <p>Email: advisorfinancialsas@gmail.com</p>
   </footer>
 
-  <a href="https://wa.me/573183269385" class="whatsapp-float" target="_blank" title="Chatea con nosotros en WhatsApp">
-    📱
-  </a>
+  <a href="https://wa.me/573183269385" class="btn-whatsapp" title="Chatea con nosotros en WhatsApp" target="_blank">📱</a>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
+    document.querySelectorAll('.accordion-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        content.classList.toggle('active');
+      });
+    });
   </script>
 </body>
 </html>
