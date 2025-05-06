@@ -4,229 +4,228 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Especialistas Financieros</title>
+  <meta name="description" content="Asesoría financiera profesional: créditos hipotecarios, vehiculares, libre destino y comerciales. Contacta a Gustavo Lopera, tu especialista financiero de confianza.">
+  <meta name="keywords" content="créditos, asesoría financiera, Gustavo Lopera, hipotecario, vehicular, libre destino, comerciales, consultoría financiera">
+  <meta name="author" content="Gustavo Lopera">
+  <link rel="canonical" href="https://especialistasfinancieros.com/">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      background-color: #0c0c0c;
       color: #fff;
       overflow-x: hidden;
     }
-
-    header {
+    header, footer {
       background-color: #121212;
-      color: white;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 999;
+      padding: 20px;
+      text-align: center;
     }
-
-    header nav a {
+    nav a {
       color: #0ff;
-      margin-left: 20px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s ease;
     }
-
-    header nav a:hover {
-      color: #fff;
-    }
-
     .hero {
-      background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437f0?fit=crop&w=1500&q=80') no-repeat center center/cover;
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
+      position: relative;
       text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+      color: #0ff;
       animation: fadeIn 2s ease-in-out;
     }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    .section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .section h2 {
-      text-align: center;
-      font-size: 3rem;
-      margin-bottom: 40px;
-      color: #0ff;
-    }
-
-    .accordion {
-      background-color: rgba(255,255,255,0.05);
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-      margin-bottom: 25px;
-      overflow: hidden;
-    }
-
-    .accordion-button {
-      background: rgba(0,0,0,0.3);
-      color: #0ff;
-      padding: 20px;
-      font-size: 1.4rem;
-      font-weight: bold;
-      border: none;
-      width: 100%;
-      cursor: pointer;
-      text-align: left;
-      transition: background 0.3s;
-    }
-
-    .accordion-button:hover {
-      background: rgba(0,0,0,0.6);
-    }
-
-    .accordion-content {
-      padding: 20px;
-      display: none;
-      color: #eee;
-    }
-
-    .accordion-content.active {
-      display: block;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-
     .btn-whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25d366;
+      background: #25D366;
       color: white;
       border-radius: 50%;
       width: 60px;
       height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      text-align: center;
       font-size: 30px;
+      line-height: 60px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
       z-index: 1000;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-      transition: transform 0.3s;
     }
-
-    .btn-whatsapp:hover {
-      transform: scale(1.1);
+    section {
+      padding: 60px 20px;
     }
-
-    footer {
-      background-color: #111;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
+    .accordion {
+      margin: 20px auto;
+      max-width: 800px;
     }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+    .accordion-button {
+      background-color: #1a1a1a;
+      color: #0ff;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .accordion-button:hover {
+      background-color: #222;
+    }
+    .accordion-content {
+      background-color: #262626;
+      padding: 15px;
+      display: none;
+    }
+    .accordion-content.active {
+      display: block;
+    }
+    footer a {
+      color: #0ff;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+    .product-img {
+      max-width: 100%;
+      margin: 15px 0;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
+  <div id="particles-js"></div>
   <header>
-    <div><strong>Especialistas Financieros</strong></div>
-    <nav>
-      <a href="#hipotecario">Hipotecario</a>
-      <a href="#vehiculo">Vehículos</a>
-      <a href="#libre">Libre Destino</a>
-      <a href="#comercial">Comercial</a>
-      <a href="#consultoria">Consultoría</a>
+    <h1 data-aos="fade-down">Especialistas Financieros</h1>
+    <nav data-aos="fade-up">
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Soluciones Financieras que Impulsan tu Futuro</h1>
+    <h1 data-aos="zoom-in">Soluciones Financieras a Tu Medida</h1>
   </section>
 
-  <section class="section" id="hipotecario" data-aos="fade-up">
-    <h2>Crédito Hipotecario</h2>
+  <!-- Productos -->
+  <section id="productos" data-aos="fade-up">
+    <h2>Productos Financieros</h2>
     <div class="accordion">
-      <button class="accordion-button">Compra de Vivienda</button>
+      <button class="accordion-button">Créditos Hipotecarios</button>
       <div class="accordion-content">
-        <p>Financia tu casa soñada con tasas competitivas y acompañamiento profesional de principio a fin.</p>
+        <img src="https://source.unsplash.com/800x400/?house,mortgage" alt="Crédito Hipotecario" class="product-img">
+        Te ayudamos a conseguir el mejor crédito para comprar o remodelar tu vivienda.
       </div>
-    </div>
-    <div class="accordion">
-      <button class="accordion-button">Leasing Habitacional</button>
-      <div class="accordion-content">
-        <p>Adquiere vivienda sin cuota inicial con opciones de leasing flexibles y ajustadas a tus necesidades.</p>
-      </div>
-    </div>
-  </section>
 
-  <section class="section" id="vehiculo" data-aos="fade-up">
-    <h2>Crédito de Vehículo</h2>
-    <div class="accordion">
-      <button class="accordion-button">Compra de Vehículos Nuevos o Usados</button>
+      <button class="accordion-button">Créditos Vehiculares</button>
       <div class="accordion-content">
-        <p>Financia tu vehículo con plazos cómodos y tasas accesibles. Te ayudamos a encontrar la mejor opción.</p>
+        <img src="https://source.unsplash.com/800x400/?car,loan" alt="Crédito Vehicular" class="product-img">
+        Obtén tu vehículo nuevo o usado con tasas competitivas y asesoría especializada.
       </div>
-    </div>
-  </section>
 
-  <section class="section" id="libre" data-aos="fade-up">
-    <h2>Crédito de Libre Destino</h2>
-    <div class="accordion">
-      <button class="accordion-button">Créditos para tus necesidades personales</button>
+      <button class="accordion-button">Créditos de Libre Destino</button>
       <div class="accordion-content">
-        <p>Usa el dinero como desees: educación, viajes, remodelación. Sin justificar el uso del crédito.</p>
+        <img src="https://source.unsplash.com/800x400/?travel,money" alt="Crédito Libre" class="product-img">
+        Financia lo que necesites: estudios, viajes o proyectos personales.
       </div>
-    </div>
-  </section>
 
-  <section class="section" id="comercial" data-aos="fade-up">
-    <h2>Créditos Comerciales</h2>
-    <div class="accordion">
-      <button class="accordion-button">Líneas para Pymes y Empresas</button>
+      <button class="accordion-button">Créditos Comerciales</button>
       <div class="accordion-content">
-        <p>Capital de trabajo, compra de activos, expansión. Diseñamos soluciones de crédito para tu negocio.</p>
+        <img src="https://source.unsplash.com/800x400/?business,finance" alt="Crédito Comercial" class="product-img">
+        Soluciones de financiación para tu empresa o negocio.
+      </div>
+
+      <button class="accordion-button">Consultoría Financiera</button>
+      <div class="accordion-content">
+        <img src="https://source.unsplash.com/800x400/?consulting,finance" alt="Consultoría" class="product-img">
+        Asesoría personalizada en planificación financiera, inversiones y más.
       </div>
     </div>
   </section>
 
-  <section class="section" id="consultoria" data-aos="fade-up">
-    <h2>Consultoría Financiera</h2>
-    <div class="accordion">
-      <button class="accordion-button">Asesoría Personalizada</button>
-      <div class="accordion-content">
-        <p>Optimiza tus finanzas, planifica inversiones o sanea deudas. Un experto te acompaña paso a paso.</p>
-      </div>
-    </div>
+  <!-- Nosotros -->
+  <section id="nosotros" data-aos="fade-up">
+    <h2>¿Quién es Gustavo Lopera?</h2>
+    <img src="https://source.unsplash.com/400x300/?businessman,finance" alt="Gustavo Lopera" class="product-img">
+    <p>Con más de 10 años de experiencia en el sector financiero, Gustavo Lopera ha ayudado a cientos de personas y empresas a tomar decisiones inteligentes sobre su dinero. Fundador de ADVISOR FINANCIAL JYG SAS, es tu aliado estratégico para obtener el crédito adecuado, optimizar tus finanzas y proyectar tu crecimiento económico.</p>
   </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" data-aos="fade-up">
+    <h2>Testimonios</h2>
+    <p>"Gracias a Gustavo obtuve mi crédito hipotecario con una tasa excelente. ¡Muy recomendado!" - María F.</p>
+    <p>"Mi empresa creció gracias al crédito comercial que me ayudó a conseguir. Gran servicio y transparencia." - Juan R.</p>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" data-aos="fade-up">
+    <h2>Contacto</h2>
+    <form action="https://formspree.io/f/mwpoonwv" method="POST">
+      <input type="text" name="nombre" placeholder="Tu Nombre" required><br><br>
+      <input type="email" name="email" placeholder="Tu Email" required><br><br>
+      <textarea name="mensaje" placeholder="Tu Mensaje" required></textarea><br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <a href="https://wa.me/573183269385" class="btn-whatsapp" target="_blank">💬</a>
 
   <footer>
-    <p>© 2025 Especialistas Financieros | Todos los derechos reservados</p>
-    <p>Email: advisorfinancialsas@gmail.com</p>
+    <p>© 2025 Especialistas Financieros | Desarrollado por Gustavo Lopera</p>
+    <p><a href="mailto:comercial@especialistasfinancieros.com">comercial@especialistasfinancieros.com</a></p>
+    <p>Cra 49 A #94-18, Bogotá D.C., Colombia</p>
   </footer>
-
-  <a href="https://wa.me/573183269385" class="btn-whatsapp" title="Chatea con nosotros en WhatsApp" target="_blank">📱</a>
 
   <script>
     AOS.init();
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80 },
+        color: { value: "#00ffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00ffff",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 3
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { particles_nb: 4 }
+        }
+      }
+    });
 
     document.querySelectorAll('.accordion-button').forEach(button => {
       button.addEventListener('click', () => {
